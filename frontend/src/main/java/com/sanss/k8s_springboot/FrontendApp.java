@@ -52,6 +52,7 @@ public class FrontendApp {
         versionCurrent.serviceCounter = serviceCount.get();
 
         log.info("test git");
+        log.info("test git 1");
 
         versionAll.instanceId = instanceId;
         versionAll.serviceName = BaseInfoModule.SERVICE_NAME_FRONTEND;
