@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svr3-deployment
+  namespace: ns-demo
+  labels: 
+    name: svr3-dp
+spec:
+  replicas: 1
+  selector:
+    matchLabels: 
+      name: pod-svr3
+  template:
+    metadata:
+      labels:
+        name: pod-svr3
+    spec:
+      containers:
+      - name: svr3
+        image: harbor.sanss.com/demo/demo-svc3:1.0.0
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 200m
+        ports:
+        - containerPort: 8003
+      imagePullSecrets:
+      - name: registry-secret

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svr2-deployment
+  namespace: ns-demo
+  labels: 
+    name: svr2-dp
+spec:
+  replicas: 2
+  selector:
+    matchLabels: 
+      name: pod-svr2
+    matchExpressions:
+      - { key: name, operator: In, values: [pod-svr2] }
+  template:
+    metadata:
+      labels:
+        name: pod-svr2
+    spec:
+      containers:
+      - name: svr2
+        image: harbor.sanss.com/demo/demo-svc2:1.0.1
+        ports:
+        - containerPort: 8002
+      imagePullSecrets:
+      - name: registry-secret

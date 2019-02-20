@@ -1,0 +1,3 @@
+com\sanss\k8s_springboot\svr1\IdcardServiceApp.class
+com\sanss\k8s_springboot\svr1\controllor\IdCardInfoControllor.class
+com\sanss\k8s_springboot\svr1\util\VersionUtil.class

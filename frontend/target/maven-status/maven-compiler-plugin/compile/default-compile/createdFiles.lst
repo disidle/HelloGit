@@ -1,0 +1,4 @@
+com\sanss\k8s_springboot\FrontendApp.class
+com\sanss\k8s_springboot\frontend\controller\RestTemplateConfig.class
+com\sanss\k8s_springboot\frontend\util\VersionUtil.class
+com\sanss\k8s_springboot\frontend\controller\BizController.class

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deploy
+  namespace: ns-demo
+  labels: 
+    name: frontend-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels: 
+      name: pod-frontend
+  template:
+    metadata:
+      labels:
+        name: pod-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: harbor.sanss.com/demo/frontend:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6001
+        livenessProbe:
+          httpGet:
+            path: /_status/healthz
+            port: 6001
+          initialDelaySeconds: 30
+          timeoutSeconds: 10
+      nodeSelector:
+        zone: gw
+      imagePullSecrets:
+      - name: registry-secret

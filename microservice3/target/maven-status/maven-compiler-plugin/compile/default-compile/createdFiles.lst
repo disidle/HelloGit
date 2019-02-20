@@ -1,0 +1,3 @@
+com\sanss\k8s_springboot\svr3\HistoryServiceApp.class
+com\sanss\k8s_springboot\svr3\util\VersionUtil.class
+com\sanss\k8s_springboot\svr3\controllor\Last10CallHistroyControllor.class

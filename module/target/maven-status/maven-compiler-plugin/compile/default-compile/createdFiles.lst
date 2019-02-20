@@ -1,0 +1,9 @@
+com\sanss\k8s_springboot\module\ContactInfoResp.class
+com\sanss\k8s_springboot\module\HealthCheckInfo.class
+com\sanss\k8s_springboot\module\CallHistoryResp.class
+com\sanss\k8s_springboot\module\BaseInfoModule.class
+com\sanss\k8s_springboot\module\IdcardInfoResp.class
+com\sanss\k8s_springboot\module\VersionInfo.class
+com\sanss\k8s_springboot\utils\Util.class
+com\sanss\k8s_springboot\module\BizinfoResp.class
+com\sanss\k8s_springboot\module\CallHistroyModule.class

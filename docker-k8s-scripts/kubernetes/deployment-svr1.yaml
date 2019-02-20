@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svr1-deployment
+  namespace: ns-demo
+  labels: 
+    name: svr1-dp
+spec:
+  replicas: 2
+  selector:
+    matchLabels: 
+      name: pod-svr1
+#    matchExpressions:
+#      - { key: name, operator: In, values: [pod-svr1] }
+  template:
+    metadata:
+      labels:
+        name: pod-svr1
+    spec:
+      containers:
+      - name: svr1
+        image: harbor.sanss.com/demo/demo-svc1:1.0.0
+        ports:
+        - containerPort: 8001
+        livenessProbe:
+          httpGet:
+            path: /_status/healthz
+            port: 8001
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
+      imagePullSecrets:
+      - name: registry-secret
