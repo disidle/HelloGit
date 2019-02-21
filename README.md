@@ -8,3 +8,5 @@ test sly123
 
 create a new branch is quick & simple.
 create a new branch 'feature1'
+
+add by branch feature2
