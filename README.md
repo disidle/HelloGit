@@ -11,3 +11,5 @@ create a new branch 'feature1'
 
 
 modify master  1
+
+add by branch feature2
